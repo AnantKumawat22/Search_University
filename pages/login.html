@@ -1,0 +1,25 @@
+<div class="authMainDiv">
+    <div class="authDiv">
+
+        <h1 class="registerHeading">Login</h1>
+
+        <form action="#" class="formContainer">
+            <!-- Email -->
+            <div class="fieldDiv">
+                <label for="email">Enter Email</label>
+                <input class="inp" type="email" ng-model="email" id="email">
+            </div>
+
+            <!-- Password -->
+            <div class="fieldDiv">
+                <label for=password">Enter Password</label>
+                <input class="inp" type="password" ng-model="password" id="password">
+            </div>
+
+            <div class="fieldDiv">
+                <input class="inpBtn" type="button" value="Login" ng-click="handleFormSubmit()">
+            </div>
+            <p>Doesn't have an account? <a ng-href="#!register">Register</a></p>
+        </form>
+    </div>
+</div>

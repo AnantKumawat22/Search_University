@@ -1,0 +1,99 @@
+.universityMainDiv{
+    width: 100%;
+    display: flex;
+    background-color: rgb(246, 246, 246);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoutPara{
+    text-align: left;
+    padding: 40px;
+    color: rgb(127, 127, 127);
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+}
+
+.search-container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container input[type="text"] {
+    width: 350px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+.showUniversity{
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    margin: 70px 0px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.univerItem{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    padding: 20px 20px;
+    margin: 20px 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.univerName{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0c4975;
+}
+
+.univerCountryAll{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgb(94, 94, 94);
+}
+
+.search-university-container{
+    padding-bottom: 30px;
+}
+
+.search-university-container input[type="text"]{
+    width: 75%;
+}
+
+.copyToClip{
+    font-size: 16px;
+    text-align: right;
+    margin-top: 30px;
+    color: rgb(146, 146, 146);
+}

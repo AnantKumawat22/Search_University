@@ -1,0 +1,60 @@
+.authMainDiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0096FF;
+}
+
+.authDiv {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: white;
+}
+
+.registerHeading {
+    margin-bottom: 30px;
+}
+
+.fieldDiv {
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.formContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer input {
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: 1px solid rgb(179, 179, 179);
+    height: 40px;
+}
+
+.inp:focus {
+    border: 2px solid #0096FF;
+}
+
+.inpBtn {
+    cursor: pointer;
+    background-color: #1177c0;
+    color: white;
+}
+
+.inpBtn:hover {
+    background-color: #2384c9;
+}

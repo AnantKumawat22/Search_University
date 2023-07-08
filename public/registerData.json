@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "fullName": "Ankit Jha",
+      "email": "ankit@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 1
+    },
+    {
+      "fullName": "Anant Kumawat",
+      "email": "anantkumawat@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 2
+    }
+  ]
+}

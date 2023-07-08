@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search University</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./../styles/style.css">
+    <link rel="stylesheet" href="./../styles/home.css">
+    <link rel="stylesheet" href="./../styles/register.css">
+    <link rel="stylesheet" href="./../styles/university.css">
+</head>
+
+<body>
+    <div class="root" ng-view></div>
+
+
+
+    <!-- js files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+
+
+    <script src="./../controllers/app.js"></script>
+
+    <!-- Home js file -->
+    <script src="./../controllers/home.js"></script>
+
+    <!-- register js file -->
+    <script src="./../controllers/register.js"></script>
+    <script src="./../services/registerService.js"></script>
+
+    <!-- login js file -->
+    <script src="./../controllers/login.js"></script>
+    <script src="./../services/loginService.js"></script>
+
+    <!-- University js file -->
+    <script src="./../controllers/university.js"></script>
+    <script src="./../services/universityService.js"></script>
+</body>
+
+</html>
