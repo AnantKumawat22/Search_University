@@ -1,13 +1,13 @@
-.universityMainDiv{
+.universityMainDiv {
     width: 100%;
     display: flex;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(254, 254, 254);
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.logoutPara{
+.logoutPara {
     text-align: left;
     padding: 40px;
     color: rgb(127, 127, 127);
@@ -47,7 +47,7 @@
     background-color: #45a049;
 }
 
-.showUniversity{
+.showUniversity {
     width: 100%;
     padding: 10px 10px;
     display: flex;
@@ -58,7 +58,7 @@
     justify-content: center;
 }
 
-.univerItem{
+.univerItem {
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -71,29 +71,76 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.univerName{
+.univerName {
     font-size: 18px;
-    margin-bottom: 5px;
-    color: #0c4975;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 25px;
+    color: #0060a9;
 }
 
-.univerCountryAll{
+.univerCountryAll {
     margin-bottom: 10px;
-    font-size: 16px;
-    color: rgb(94, 94, 94);
+    font-size: 14px;
+    color: rgb(113, 113, 113);
 }
 
-.search-university-container{
+.domainPara {
+    color: rgb(82, 82, 82);
+}
+
+.search-university-container {
     padding-bottom: 30px;
 }
 
-.search-university-container input[type="text"]{
+.search-university-container input[type="text"] {
     width: 75%;
 }
 
-.copyToClip{
+.copyToClip {
     font-size: 16px;
     text-align: right;
     margin-top: 30px;
-    color: rgb(146, 146, 146);
+    cursor: pointer;
+    color: rgb(203, 203, 203);
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    margin-right: 4px;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+button.loading .spinner {
+    display: inline-block;
+}
+
+button.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 770px){
+    .showUniversity{
+        margin: 20px 0px;
+    }
+    .logoutPara{
+        padding: 20px;
+    }
 }

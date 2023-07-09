@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    padding: 5px;
     justify-content: center;
     align-items: center;
     background-color: #0096FF;
@@ -57,4 +58,10 @@
 
 .inpBtn:hover {
     background-color: #2384c9;
+}
+
+@media (max-width: 420px){
+    .authDiv{
+        padding: 20px 5px;
+    }
 }

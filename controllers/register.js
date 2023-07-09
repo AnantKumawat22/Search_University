@@ -66,6 +66,9 @@ app.controller("registerCtrl", [
         });
 
         if (sc.user.length === 0) {
+
+          // Hash Password.
+
           registerService.addUser({
             fullName: sc.fullName,
             email: sc.email,

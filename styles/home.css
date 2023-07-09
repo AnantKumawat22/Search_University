@@ -35,3 +35,14 @@
 .homeRegisterBtn:hover{
     background-color: #16995c;
 }
+
+@media (max-width: 660px){
+    .homeDiv h1{
+        font-size: 35px;
+    }
+    
+    .homeDiv p{
+        text-align: center;
+        font-size: 14px;
+    }
+}
