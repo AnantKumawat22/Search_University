@@ -9,7 +9,10 @@ app.controller("universityCtrl", [
       universityService.goToLogin();
     }
 
-    // University searched 
+    // User Email
+    sc.userEmail = JSON.parse(checkAuth).email;
+
+    // University searched
     sc.searchedUniversity = [];
 
     // Search country input field.
@@ -37,49 +40,55 @@ app.controller("universityCtrl", [
 
       universityService.getUniversityData(sc.countrySearch, function (data) {
         sc.universities = data;
-        
+
         // Loading Spinner - End.
         button.classList.remove("loading");
         sc.isSearchCountryLoader = false;
+        sc.countrySearch = "";
       });
     };
 
     sc.handleUniversitySearchChange = function () {
       sc.searchedUniversity = sc.universities?.filter((data) => {
-        return data.name.toLowerCase().includes(sc.universitySearch?.toLowerCase().trim());
+        return data.name
+          .toLowerCase()
+          .includes(sc.universitySearch?.toLowerCase().trim());
       });
-      console.log(sc.searchedUniversity)
+    };
+
+    // Redirect on Favourite.html
+    sc.showFavouritePage = function () {
+      universityService.goToFavourite();
     };
 
     // Copy the university name.
     sc.copyClipboard = function (dataToCopy) {
       navigator.clipboard.writeText(dataToCopy);
     };
-  },
-]);
 
-app.directive("infiniteScroll", [
-  "$window",
-  function ($window) {
-    return {
-      link: function (scope, element, attrs) {
-        var rawElement = element[0];
-
-        function onScroll() {
-          if (
-            rawElement.scrollTop + rawElement.offsetHeight >=
-            rawElement.scrollHeight
-          ) {
-            scope.$apply(attrs.infiniteScroll);
-          }
-        }
-
-        angular.element($window).bind("scroll", onScroll);
-
-        scope.$on("$destroy", function () {
-          angular.element($window).unbind("scroll", onScroll);
+    sc.handleFavClick = function (university) {
+      // If the university is already in favourite.
+      universityService.isUniversityFavourite(function (data) {
+        sc.isCheckFav = data.filter((data) => {
+          return (
+            data.userEmail === JSON.parse(checkAuth).email &&
+            data.name === university.name
+          );
         });
-      },
+
+        if (sc.isCheckFav.length) {
+          alert("Already added to favourite.");
+          return;
+        } else {
+          university.userEmail = JSON.parse(checkAuth).email;
+          universityService.addToFavourite(university);
+          alert("Added to Favourite.");
+        }
+      });
+    };
+
+    sc.openUniversityLink = function (linkTo) {
+      universityService.goToParticularUniversity(linkTo);
     };
   },
 ]);

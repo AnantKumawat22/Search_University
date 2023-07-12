@@ -1,9 +1,4 @@
 app.service("loginService", function ($http, $location) {
-    // Route - login.html
-    this.goToHome = function () {
-      $location.path("/university");
-    };
-
     // Route - university.html
     this.goToUniversity = function () {
       $location.path("/university");
@@ -19,7 +14,7 @@ app.service("loginService", function ($http, $location) {
           any(response.data);
         },
         function (error) {
-          console.log(error);
+          console.log("Get Users - Error: ", error);
         }
       );
     };

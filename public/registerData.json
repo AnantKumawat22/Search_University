@@ -15,10 +15,18 @@
       "id": 2
     },
     {
-      "fullName": "Ankit Jha",
-      "email": "jha@gmail.com",
-      "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+      "fullName": "Ujjwal Sharma",
+      "email": "ujjwal.sharma.cse47@gmail.com",
+      "password": "Ujjwal@123",
+      "cPassword": "Ujjwal@123",
       "id": 3
+    },
+    {
+      "fullName": "Apoorv",
+      "email": "apoorv@gmail.com",
+      "password": "12345678",
+      "cPassword": "12345678",
+      "id": 4
     }
   ]
 }

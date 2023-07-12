@@ -1,47 +1,84 @@
 <div class="universityMainDiv">
-    <!-- Logout -->
-    <p class="logoutPara"><span style="cursor: pointer;" ng-click="handleLogout()">Logout</span></p>
+    <!-- User-Email, Favourite and Logout -->
+    <p class="logoutPara">
+        <span>{{ userEmail }}</span>
+        <span class="favouriteHeading" ng-click="showFavouritePage()"><i class="fas fa-star" style="color: #FFD700; margin-bottom: 2px;"></i></span>
+        <span style="cursor: pointer" ng-click="handleLogout()">Logout</span>
+    </p>
 
     <!-- Search Country -->
-    <div class="search-container" style="padding: 0px 10px;">
-        <input type="text" ng-model="countrySearch" placeholder="Search country...">
-        <button type="submit" ng-click="handleCountrySearch()" id="search-button">
-            <span class="spinner"></span><span ng-if="!isSearchCountryLoader">Search</span></button>
+    <div class="search-container" style="padding: 0px 10px">
+        <input type="text" ng-model="countrySearch" placeholder="Search country..." />
+        <button type="button" id="search-button" ng-click="handleCountrySearch()">
+            <span class="spinner"></span><span ng-if="!isSearchCountryLoader">Search</span>
+        </button>
     </div>
 
     <div class="showUniversity" id="scrollable-content" infinite-scroll="loadMore()" infinite-scroll-distance="1">
-
         <!-- Search University -->
         <div class="search-container search-university-container">
-            <input type="text" ng-change="handleUniversitySearchChange()" ng-model="universitySearch" placeholder="Search universities...">
+            <input type="text" ng-change="handleUniversitySearchChange()" ng-model="universitySearch"
+                placeholder="Search universities..." />
         </div>
 
         <!-- University List - All -->
         <div class="univerItem" ng-if="!universitySearch.length" ng-repeat="university in universities">
-            <a class="univerName" href={{university.web_pages}} target="_blank">{{ university.name }}</a>
-            <p class="univerCountryAll">{{ university['state-province'] }}, {{ university.country }} ({{
-                university.alpha_two_code }})</p>
-            <p class="domainPara"><b>Domain:</b> <span class="univerDomain">upes.ac.in</span></p>
-            <p style="text-align: right;"><i class="fa fa-copy copyToClip"></i> <span class="copyToClip"
-                    ng-click='copyClipboard(university.name)'>copy to clipboard</span></p>
+            <span class="univerName" ng-click="openUniversityLink(university.web_pages)">{{ university.name }}</span>
+            <p class="univerCountryAll">
+                {{ university['state-province'] }}, {{ university.country }} ({{
+                university.alpha_two_code }})
+            </p>
+            <p class="domainPara">
+                <b>Domain:</b> <span class="univerDomain">upes.ac.in</span>
+            </p>
+            <p style="
+          text-align: right;
+          display: flex;
+          margin-top: 20px;
+          justify-content: space-between;
+          align-items: end;
+        ">
+                <span>
+                    <button type="button" class="search-button" ng-click="handleFavClick(university)">Add to Fav.</button>
+                </span>
+                <span><i class="fa fa-copy copyToClip"></i>
+                    <span class="copyToClip" ng-click="copyClipboard(university.name)">copy to clipboard</span></span>
+            </p>
         </div>
 
         <!-- University List - Searched one only -->
         <div class="univerItem" ng-if="universitySearch.length" ng-repeat="university in searchedUniversity">
-            <a class="univerName" href={{university.web_pages}} target="_blank">{{ university.name }}</a>
-            <p class="univerCountryAll">{{ university['state-province'] }}, {{ university.country }} ({{
-                university.alpha_two_code }})</p>
-            <p class="domainPara"><b>Domain:</b> <span class="univerDomain">upes.ac.in</span></p>
-            <p style="text-align: right;"><i class="fa fa-copy copyToClip"></i> <span class="copyToClip"
-                    ng-click='copyClipboard(university.name)'>copy to clipboard</span></p>
+            <span class="univerName" ng-click="openUniversityLink(university.web_pages)">{{ university.name }}</span>
+            <p class="univerCountryAll">
+                {{ university['state-province'] }}, {{ university.country }} ({{
+                university.alpha_two_code }})
+            </p>
+            <p class="domainPara">
+                <b>Domain:</b> <span class="univerDomain">upes.ac.in</span>
+            </p>
+
+            <p style="
+          text-align: right;
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+        ">
+                <span><button type="button" class="search-button" ng-click="handleFavClick(university)">Add to Fav.</button>
+                </span>
+
+                <span class="copyToClip" ng-click="copyClipboard(university.name)">
+                    <i class="fa fa-copy copyToClip"></i>
+                    copy to clipboard</span>
+            </p>
         </div>
 
         <!-- If there is no university to show. -->
-        <div ng-if="!universities.length || !searchedUniversity.length" style='
-            min-height: 500px'>
-            <Image src="./../public/assets/images/No_Group_Found.gif" width="350" height="350"></Image>
-            <p style='font-size: 20px; text-align: center; color: grey'>No University Found</p>
+        <div ng-if="!universities.length || (!searchedUniversity.length && universitySearch.length)"
+            style="min-height: 500px">
+            <image src="./../public/assets/images/No_Group_Found.gif" width="350" height="350"></image>
+            <p style="font-size: 20px; text-align: center; color: rgb(255, 255, 255)">
+                No University Found
+            </p>
         </div>
     </div>
-
 </div>

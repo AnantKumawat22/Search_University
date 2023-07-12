@@ -48,9 +48,9 @@ app.controller("loginCtrl", [
           return;
         }
         $window.localStorage.setItem('user', JSON.stringify(sc.user[0]));
+        alert("Login Successful.");
+        loginService.goToUniversity();
       });
-      alert("Login Successful.");
-      loginService.goToUniversity();
     };
   },
 ]);

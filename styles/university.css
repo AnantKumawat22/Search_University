@@ -1,16 +1,18 @@
 .universityMainDiv {
     width: 100%;
+    min-height: 100vh;
     display: flex;
-    background-color: rgb(254, 254, 254);
+    background: #3498db;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .logoutPara {
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     padding: 40px;
-    color: rgb(127, 127, 127);
+    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 20px;
     width: 100%;
@@ -28,14 +30,16 @@
     width: 350px;
     padding: 10px;
     font-size: 17px;
+    outline: none;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.search-container button {
+.search-container button,
+.search-button {
     padding: 10px 20px;
     margin-left: 10px;
-    background-color: #4CAF50;
+    background-color: #000000;
     border: none;
     font-size: 17px;
     color: white;
@@ -43,8 +47,31 @@
     border-radius: 4px;
 }
 
-.search-container button:hover {
-    background-color: #45a049;
+.favouriteHeading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    z-index: 99999;
+    background: #000000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.search-button {
+    margin: 0px;
+    padding: 5px 10px;
+    background-color: #50C878;
+    font-size: 14px;
+}
+
+.search-container button:hover,
+.search-button:hover {
+    background-color: #313131;
 }
 
 .showUniversity {
@@ -63,7 +90,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 200px;
+    min-height: 230px;
     padding: 20px 20px;
     margin: 20px 10px;
     border-radius: 8px;
@@ -77,6 +104,7 @@
     text-decoration: none;
     line-height: 25px;
     color: #0060a9;
+    cursor: pointer;
 }
 
 .univerCountryAll {
@@ -107,7 +135,7 @@
 
 /* Loading Spinner */
 .spinner {
-    border: 2px solid #f3f3f3;
+    border: 3px solid #ffffff;
     border-top: 4px solid #3498db;
     border-radius: 50%;
     width: 16px;
@@ -136,11 +164,12 @@ button.loading {
     opacity: 0.6;
 }
 
-@media (max-width: 770px){
-    .showUniversity{
+@media (max-width: 770px) {
+    .showUniversity {
         margin: 20px 0px;
     }
-    .logoutPara{
+
+    .logoutPara {
         padding: 20px;
     }
 }

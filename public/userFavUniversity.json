@@ -1,0 +1,116 @@
+{
+  "favourite": [
+    {
+      "web_pages": [
+        "http://www.lpu.in/"
+      ],
+      "domains": [
+        "lpu.in"
+      ],
+      "country": "India",
+      "name": "Lovely Professional University",
+      "state-province": "Punjab",
+      "alpha_two_code": "IN",
+      "userEmail": "anantkumawat@gmail.com",
+      "id": 1
+    },
+    {
+      "web_pages": [
+        "http://www.ddu.ac.in/"
+      ],
+      "domains": [
+        "ddu.ac.in"
+      ],
+      "country": "India",
+      "name": "Dharamsinh Desai University",
+      "state-province": "Gujarat",
+      "alpha_two_code": "IN",
+      "userEmail": "ankit@gmail.com",
+      "id": 3
+    },
+    {
+      "web_pages": [
+        "http://www.davietjal.org/"
+      ],
+      "domains": [
+        "davietjal.org"
+      ],
+      "country": "India",
+      "name": "DAV Institute of Engineering & Technology",
+      "state-province": "Punjab",
+      "alpha_two_code": "IN",
+      "userEmail": "anantkumawat@gmail.com",
+      "id": 6
+    },
+    {
+      "web_pages": [
+        "https://www.iitbbs.ac.in/"
+      ],
+      "domains": [
+        "iitbbs.ac.in"
+      ],
+      "country": "India",
+      "name": "IIT Bhubaneswar",
+      "state-province": "Odisha",
+      "alpha_two_code": "IN",
+      "userEmail": "apoorv@gmail.com",
+      "id": 8
+    },
+    {
+      "web_pages": [
+        "http://www.aku.edu/"
+      ],
+      "domains": [
+        "aku.edu"
+      ],
+      "country": "Pakistan",
+      "name": "Aga Khan University",
+      "state-province": "Sindh",
+      "alpha_two_code": "PK",
+      "userEmail": "apoorv@gmail.com",
+      "id": 9
+    },
+    {
+      "web_pages": [
+        "http://www.lpu.in/"
+      ],
+      "domains": [
+        "lpu.in"
+      ],
+      "country": "India",
+      "name": "Lovely Professional University",
+      "state-province": "Punjab",
+      "alpha_two_code": "IN",
+      "userEmail": "ankit@gmail.com",
+      "id": 10
+    },
+    {
+      "web_pages": [
+        "https://www.upes.ac.in/"
+      ],
+      "domains": [
+        "upes.ac.in"
+      ],
+      "country": "India",
+      "name": "University of Petroleum and Energy Studies",
+      "state-province": "Dehradun",
+      "alpha_two_code": "IN",
+      "userEmail": "ankit@gmail.com",
+      "id": 11
+    },
+    {
+      "web_pages": [
+        "http://www.amtuni.com/"
+      ],
+      "domains": [
+        "amtuni.com"
+      ],
+      "country": "India",
+      "name": "Amravati University",
+      "state-province": null,
+      "alpha_two_code": "IN",
+      "userEmail": "ankit@gmail.com",
+      "id": 12
+    }
+  ]
+}

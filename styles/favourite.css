@@ -1,0 +1,27 @@
+.favouriteMainDiv{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    cursor: pointer;
+    background-color: #3498db;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.backPara {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+}

@@ -19,7 +19,7 @@ app.service("registerService", function ($http, $location) {
         any(response.data);
       },
       function (error) {
-        console.log(error);
+        console.log("Get Users - Error: ", error);
       }
     );
   };
@@ -32,10 +32,10 @@ app.service("registerService", function ($http, $location) {
       data: user,
     }).then(
       function (response) {
-        console.log(response);
+        console.log("Add User - response: ", response);
       },
       function (error) {
-        console.log(error);
+        console.log("Add User - Error: ", error);
       }
     );
   };
