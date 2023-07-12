@@ -6,22 +6,23 @@ app.controller("registerCtrl", [
     // Check user logged in or not.
     var checkAuth = $window.localStorage.getItem("user");
     if (checkAuth) {
+      // Redirect: To university page. If the user already logged-in.
       registerService.goToUniversity();
     }
 
-    // Name
+    // Name field
     sc.fullName = "";
 
-    // Email
+    // Email field
     sc.email = "";
 
-    // Password
+    // Password field
     sc.password = "";
 
-    // Confrim Password
+    // Confrim Password field
     sc.cPassword = "";
 
-    // Form Submit Button
+    // Register form Submit
     sc.handleFormSubmit = () => {
       var validRegex =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -38,7 +39,7 @@ app.controller("registerCtrl", [
         return;
       }
 
-      // passwrod validation.
+      // password validation.
       if (sc.password.length < 6) {
         alert("Password must contain atleast 6 characters.");
         return;
@@ -66,9 +67,6 @@ app.controller("registerCtrl", [
         });
 
         if (sc.user.length === 0) {
-
-          // Hash Password.
-
           registerService.addUser({
             fullName: sc.fullName,
             email: sc.email,

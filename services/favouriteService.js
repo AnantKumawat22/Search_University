@@ -1,8 +1,15 @@
-app.service("favouriteService", function ($http, $location) {
+app.service("favouriteService", function ($http, $window, $location) {
+  // Redirect: To university page
   this.goToUniversity = function () {
     $location.path("/university");
   };
 
+  // Redirect: To particular university
+  this.goToParticularUniversity = function (linkTo) {
+    $window.open(linkTo, "_blank");
+  };
+
+  // Delete university from favourite.
   this.deleteFavouriteUniversity = function (universityId) {
     $http({
       method: "DELETE",
@@ -17,6 +24,7 @@ app.service("favouriteService", function ($http, $location) {
     );
   };
 
+  // Fetch all favourite university.
   this.getAllFavouriteUniversities = function (getDataFun) {
     $http({
       method: "GET",

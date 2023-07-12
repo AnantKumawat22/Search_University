@@ -4,21 +4,19 @@ app.controller("loginCtrl", [
   "$window",
   function (sc, loginService, $window) {
     // Check user logged in or not.
-    var checkAuth = $window.localStorage.getItem('user');
-    if(checkAuth){
+    var checkAuth = $window.localStorage.getItem("user");
+    if (checkAuth) {
+      // Redirect: To university page. If the user already logged-in.
       loginService.goToUniversity();
     }
 
-    // Store users
-    sc.user = [];
-
-    // Email
+    // Email field
     sc.email = "";
 
-    // Password
+    // Password field
     sc.password = "";
 
-    // Form Submit Button
+    // handle login form Submit
     sc.handleFormSubmit = () => {
       var validRegex =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -29,7 +27,7 @@ app.controller("loginCtrl", [
         return;
       }
 
-      // passwrod validation.
+      // password validation.
       if (sc.password.length < 6) {
         alert("Password must contain atleast 6 characters.");
         return;
@@ -38,6 +36,7 @@ app.controller("loginCtrl", [
         return;
       }
 
+      // Fetch all registered users to check login credentials.
       loginService.getUsers(function (data) {
         sc.user = data.filter((data) => {
           return data.email === sc.email && data.password === sc.password;
@@ -47,7 +46,7 @@ app.controller("loginCtrl", [
           alert("Enter valid credentials.");
           return;
         }
-        $window.localStorage.setItem('user', JSON.stringify(sc.user[0]));
+        $window.localStorage.setItem("user", JSON.stringify(sc.user[0]));
         alert("Login Successful.");
         loginService.goToUniversity();
       });

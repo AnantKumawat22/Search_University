@@ -27,6 +27,13 @@
       "password": "12345678",
       "cPassword": "12345678",
       "id": 4
+    },
+    {
+      "fullName": "ritik",
+      "email": "ritik@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 5
     }
   ]
 }

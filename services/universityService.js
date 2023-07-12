@@ -1,4 +1,6 @@
 app.service("universityService", function ($http, $window, $location) {
+
+  // Fetch all university according to search country.
   this.getUniversityData = function (searchCountry, sendfunc) {
     $http({
       method: "GET",
@@ -13,7 +15,7 @@ app.service("universityService", function ($http, $window, $location) {
     );
   };
 
-  // Get all favourite universities.
+  // Fetch all favourite universities.
   this.isUniversityFavourite = function(favFun){
     $http({
       method: "GET",
@@ -38,15 +40,17 @@ app.service("universityService", function ($http, $window, $location) {
     });
   }
 
+  // Redirect: To favourite page
   this.goToFavourite = function () {
     $location.path("/favourite");
   };
 
-  // Redirect - login.html
+  // Redirect: To login page
   this.goToLogin = function () {
     $location.path("/login");
   };
 
+  // Redirect: To particular university page
   this.goToParticularUniversity = function (linkTo) {
     $window.open(linkTo, "_blank");
   };

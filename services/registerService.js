@@ -1,15 +1,16 @@
 app.service("registerService", function ($http, $location) {
-  // Route - register.html
+  
+  // Redirect: To login page
   this.goToLogin = function () {
     $location.path("/login");
   };
 
-  // Route - university.html
+  // Redirect: To university page
   this.goToUniversity = function () {
     $location.path("/university");
   };
 
-  // Get User.
+  // Fetch all the registered users.
   this.getUsers = (any) => {
     $http({
       method: "GET",

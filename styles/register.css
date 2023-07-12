@@ -60,8 +60,8 @@
     background-color: #2384c9;
 }
 
-@media (max-width: 420px){
-    .authDiv{
+@media (max-width: 420px) {
+    .authDiv {
         padding: 20px 5px;
     }
 }

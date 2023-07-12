@@ -2,37 +2,41 @@
 
     <div class="authDiv">
 
+        <!-- Register heading page -->
         <h1 class="registerHeading">Register</h1>
 
         <form action="#" class="formContainer">
 
-            <!-- Name -->
+            <!-- Name field -->
             <div class="fieldDiv">
                 <label for="fullName">Enter Name</label>
                 <input class="inp" type="text" ng-model="fullName" id="fullName">
             </div>
 
-            <!-- Email -->
+            <!-- Email field -->
             <div class="fieldDiv">
                 <label for="email">Enter Email</label>
                 <input class="inp" type="email" ng-model="email" id="email">
             </div>
 
-            <!-- Password -->
+            <!-- Password field -->
             <div class="fieldDiv">
                 <label for=password">Enter Password</label>
                 <input class="inp" type="password" ng-model="password" id="password">
             </div>
 
-            <!-- Confirm Password -->
+            <!-- Confirm Password field -->
             <div class="fieldDiv">
                 <label for="cPasswordName">Confirm Password</label>
                 <input class="inp" type="password" ng-model="cPassword" id="cPasswordName">
             </div>
 
+            <!-- Handle register submit -->
             <div class="fieldDiv">
                 <input class="inpBtn" type="button" value="Register" ng-click="handleFormSubmit()">
             </div>
+
+            <!-- Redirect on login page -->
             <p>Already have an account? <a ng-href="#!login">Login</a></p>
         </form>
     </div>

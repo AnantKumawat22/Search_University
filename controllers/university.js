@@ -6,14 +6,12 @@ app.controller("universityCtrl", [
     // Check if user login or not.
     var checkAuth = $window.localStorage.getItem("user");
     if (!checkAuth) {
+      // Redirect: To login page. If the user not logged-in.
       universityService.goToLogin();
     }
 
     // User Email
     sc.userEmail = JSON.parse(checkAuth).email;
-
-    // University searched
-    sc.searchedUniversity = [];
 
     // Search country input field.
     sc.countrySearch = "";
@@ -27,11 +25,12 @@ app.controller("universityCtrl", [
       universityService.goToLogin();
     };
 
-    // Get university data.
+    // Fetch university data - india.
     universityService.getUniversityData("india", function (data) {
       sc.universities = data;
     });
 
+    // Fetch university data according to search country.
     sc.handleCountrySearch = function () {
       // Loading Spinner - Start.
       sc.isSearchCountryLoader = true;
@@ -48,6 +47,7 @@ app.controller("universityCtrl", [
       });
     };
 
+    // Search university by name.
     sc.handleUniversitySearchChange = function () {
       sc.searchedUniversity = sc.universities?.filter((data) => {
         return data.name
@@ -56,18 +56,14 @@ app.controller("universityCtrl", [
       });
     };
 
-    // Redirect on Favourite.html
-    sc.showFavouritePage = function () {
-      universityService.goToFavourite();
-    };
-
-    // Copy the university name.
+    // Copy to clipboard - The university name.
     sc.copyClipboard = function (dataToCopy) {
       navigator.clipboard.writeText(dataToCopy);
     };
 
+    // Add university as favourite.
     sc.handleFavClick = function (university) {
-      // If the university is already in favourite.
+      // If the university is already in favourite - Don't add in favourite.
       universityService.isUniversityFavourite(function (data) {
         sc.isCheckFav = data.filter((data) => {
           return (
@@ -87,6 +83,12 @@ app.controller("universityCtrl", [
       });
     };
 
+    // Redirect: To favourite page
+    sc.showFavouritePage = function () {
+      universityService.goToFavourite();
+    };
+
+    // Redirect: To particular university page
     sc.openUniversityLink = function (linkTo) {
       universityService.goToParticularUniversity(linkTo);
     };

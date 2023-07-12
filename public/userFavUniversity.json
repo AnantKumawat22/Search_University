@@ -81,36 +81,64 @@
       "name": "Lovely Professional University",
       "state-province": "Punjab",
       "alpha_two_code": "IN",
-      "userEmail": "ankit@gmail.com",
+      "userEmail": "ritik@gmail.com",
       "id": 10
     },
     {
       "web_pages": [
-        "https://www.upes.ac.in/"
+        "http://www.altmeduniversity.com/"
       ],
       "domains": [
-        "upes.ac.in"
+        "altmeduniversity.com"
       ],
       "country": "India",
-      "name": "University of Petroleum and Energy Studies",
-      "state-province": "Dehradun",
+      "name": "Open International University for Alternative Medicines",
+      "state-province": null,
       "alpha_two_code": "IN",
-      "userEmail": "ankit@gmail.com",
+      "userEmail": "anantkumawat@gmail.com",
       "id": 11
     },
     {
       "web_pages": [
-        "http://www.amtuni.com/"
+        "http://www.angrau.net/"
       ],
       "domains": [
-        "amtuni.com"
+        "angrau.net"
       ],
       "country": "India",
-      "name": "Amravati University",
+      "name": "Acharya Ranga Agricultural University",
       "state-province": null,
       "alpha_two_code": "IN",
-      "userEmail": "ankit@gmail.com",
+      "userEmail": "anantkumawat@gmail.com",
       "id": 12
+    },
+    {
+      "web_pages": [
+        "http://www.banasthali.org/"
+      ],
+      "domains": [
+        "banasthali.org"
+      ],
+      "country": "India",
+      "name": "Banasthali University",
+      "state-province": null,
+      "alpha_two_code": "IN",
+      "userEmail": "anantkumawat@gmail.com",
+      "id": 13
+    },
+    {
+      "web_pages": [
+        "http://www.bamu.net/"
+      ],
+      "domains": [
+        "bamu.net"
+      ],
+      "country": "India",
+      "name": "Dr. Babasaheb Ambedkar Marathwada Universtiy",
+      "state-province": null,
+      "alpha_two_code": "IN",
+      "userEmail": "anantkumawat@gmail.com",
+      "id": 14
     }
   ]
 }
