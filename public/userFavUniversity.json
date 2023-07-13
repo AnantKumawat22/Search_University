@@ -139,6 +139,34 @@
       "alpha_two_code": "IN",
       "userEmail": "anantkumawat@gmail.com",
       "id": 14
+    },
+    {
+      "web_pages": [
+        "http://www.lpu.in/"
+      ],
+      "domains": [
+        "lpu.in"
+      ],
+      "country": "India",
+      "name": "Lovely Professional University",
+      "state-province": "Punjab",
+      "alpha_two_code": "IN",
+      "userEmail": "anant@gmail.com",
+      "id": 15
+    },
+    {
+      "web_pages": [
+        "http://www.ddu.ac.in/"
+      ],
+      "domains": [
+        "ddu.ac.in"
+      ],
+      "country": "India",
+      "name": "Dharamsinh Desai University",
+      "state-province": "Gujarat",
+      "alpha_two_code": "IN",
+      "userEmail": "anant@gmail.com",
+      "id": 16
     }
   ]
 }

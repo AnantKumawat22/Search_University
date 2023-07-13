@@ -9,6 +9,8 @@
 }
 
 .favDiv {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,4 +26,10 @@
     font-weight: 700;
     font-size: 20px;
     width: 100%;
+}
+
+@media (max-width: 770px) {
+    .backPara {
+        padding: 20px;
+    }
 }

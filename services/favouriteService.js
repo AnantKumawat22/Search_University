@@ -4,6 +4,11 @@ app.service("favouriteService", function ($http, $window, $location) {
     $location.path("/university");
   };
 
+  // Redirect: To login page
+  this.goToLogin = function () {
+    $location.path("/login");
+  };
+
   // Redirect: To particular university
   this.goToParticularUniversity = function (linkTo) {
     $window.open(linkTo, "_blank");

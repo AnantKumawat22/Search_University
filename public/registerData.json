@@ -34,6 +34,13 @@
       "password": "123456",
       "cPassword": "123456",
       "id": 5
+    },
+    {
+      "fullName": "Anant Kumawat",
+      "email": "anant@gmail.com",
+      "password": "123456",
+      "cPassword": "123456",
+      "id": 6
     }
   ]
 }

@@ -7,7 +7,7 @@ app.controller("favouriteCtrl", [
     var checkAuth = $window.localStorage.getItem("user");
     if (!checkAuth) {
       // Redirect: To login page. If user not logged-in.
-      universityService.goToLogin();
+      favouriteService.goToLogin();
     }
 
     // Redirect: To university page
